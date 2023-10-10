@@ -1,0 +1,22 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLastWord = function(s) {
+    let flag = false
+    let space = 0 
+    if (s.length === 0) {
+        return
+    }
+    for(let i = s.length-1; i >= 0; i--) {
+        if (s[i] != " ") {
+            flag = true
+            space++
+        }
+        if(s[i] == " " && flag) {
+            break
+        } 
+    }
+    return space
+
+};  
